@@ -1,95 +1,67 @@
+'use client'
+import styled from 'styled-components'
 import Image from 'next/image'
-import styles from './page.module.css'
+import * as Icon from '@/assets/icon'
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <HomeStyle>
+      <div className="banner-wrapper">
+        <div className="banner">
+          <div>All Right</div>
+          <div>Frontend</div>
         </div>
+        <button>Meet Our Team</button>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="img-wrapper">
+        <Image src={Icon.padaeng} className="img" alt="profile icon" />
+        <Image src={Icon.basak} className="img" alt="profile icon" />
+        <Image src={Icon.siyun} className="img" alt="profile icon" />
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <div className="background"></div>
+    </HomeStyle>
   )
 }
+
+export default Home
+
+const HomeStyle = styled.div`
+  .banner-wrapper {
+    margin: 200px 0 0 17%;
+    .banner {
+      font-size: 145px;
+      font-weight: 600;
+      margin-bottom: 50px;
+    }
+  }
+  button {
+    width: 200px;
+    height: 45px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 50px;
+  }
+  .img-wrapper {
+    position: relative;
+    left: 42%;
+    top: -480px;
+    z-index: -1;
+    .img {
+      width: 270px;
+      height: 500px;
+      margin-right: 20px;
+    }
+  }
+  .background {
+    background-color: #4aa8d8;
+    width: 100%;
+    height: 1390px;
+    position: absolute;
+    top: 520px;
+    z-index: -2;
+    border-radius: 1250px 0 0 0;
+  }
+`
