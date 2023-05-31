@@ -1,67 +1,11 @@
 'use client'
-import styled from 'styled-components'
-import Image from 'next/image'
-import * as Icon from '@/assets/icon'
+import {Banner, Project} from '@/components/home'
 
-const Home = () => {
-  return (
-    <HomeStyle>
-      <div className="banner-wrapper">
-        <div className="banner">
-          <div>All Right</div>
-          <div>Frontend</div>
-        </div>
-        <button>Meet Our Team</button>
-      </div>
-      <div className="img-wrapper">
-        <Image src={Icon.padaeng} className="img" alt="profile icon" />
-        <Image src={Icon.basak} className="img" alt="profile icon" />
-        <Image src={Icon.siyun} className="img" alt="profile icon" />
-      </div>
-      <div className="background"></div>
-    </HomeStyle>
-  )
-}
+const Home = () => (
+  <>
+    <Banner />
+    <Project />
+  </>
+)
 
 export default Home
-
-const HomeStyle = styled.div`
-  .banner-wrapper {
-    margin: 200px 0 0 17%;
-    .banner {
-      font-size: 145px;
-      font-weight: 600;
-      margin-bottom: 50px;
-    }
-  }
-  button {
-    width: 200px;
-    height: 45px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 50px;
-  }
-  .img-wrapper {
-    position: relative;
-    left: 42%;
-    top: -480px;
-    z-index: -1;
-    .img {
-      width: 270px;
-      height: 500px;
-      margin-right: 20px;
-    }
-  }
-  .background {
-    background-color: #4aa8d8;
-    width: 100%;
-    height: 1390px;
-    position: absolute;
-    top: 520px;
-    z-index: -2;
-    border-radius: 1250px 0 0 0;
-  }
-`
