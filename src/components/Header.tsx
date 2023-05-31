@@ -34,6 +34,8 @@ export default function Header({}: Props) {
     </HeaderContainer>
   )
 }
+
+// 마진 값 세부 조정 필요
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -43,7 +45,6 @@ const HeaderContainer = styled.div`
   @media (max-width: 1440px) {
     padding: 0 100px;
   }
-  // 마진 값 세부 조정 필요
 `
 
 const LogoBox = styled.div`
