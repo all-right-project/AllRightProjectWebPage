@@ -2,6 +2,10 @@
 
 import React from 'react'
 import styled from 'styled-components'
+import SliderBox from '@/components/blog/SliderBox'
+import Categories from '@/components/blog/Categories'
+import Card from '@/components/parts/Card'
+import SearchIcon from '@/components/blog/SearchIcon'
 
 type Props = {}
 
@@ -12,27 +16,12 @@ const page = (props: Props) => {
       <div>
         <div>
           <h2>최근 게시물</h2>
-          <div>슬라이더 박스</div>
+          <SliderBox />
         </div>
-        <div>
-          <div>
-            <ul>
-              <li>모두보기</li>
-              <li>인기</li>
-              <li>프론트엔드</li>
-              <li>백엔드</li>
-              <li>기타</li>
-            </ul>
-            <div>
-              검색
-              <input type="text" placeholder="카테고리 / 게시물 검색" />
-            </div>
-          </div>
-          <div>검색 결과</div>
-        </div>
+        <Categories />
         <div>
           <h2>게시물</h2>
-          <div>게시물 리스트</div>
+          <Card children={<SearchIcon data=""></SearchIcon>} />
         </div>
       </div>
     </BlogContainer>
@@ -43,6 +32,8 @@ export default page
 
 const BlogContainer = styled.div`
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -51,3 +42,18 @@ const BlogContainer = styled.div`
     background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
   }
 `
+
+const CardData = [
+  {
+    id: 1,
+    title: '제목1',
+    content: '내용1',
+    date: '날짜',
+  },
+  {
+    id: 2,
+    title: '제목2',
+    content: '내용2',
+    date: '날짜2',
+  },
+]
