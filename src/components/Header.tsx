@@ -4,9 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
 
-interface Props {}
-
-export default function Header({}: Props) {
+export default function Header() {
   return (
     <HeaderContainer>
       <LogoBox>
@@ -41,8 +39,8 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  max-width: 1440px;
-  @media (max-width: 1440px) {
+  max-width: 1280px;
+  @media (max-width: 1280px) {
     padding: 0 100px;
   }
 `

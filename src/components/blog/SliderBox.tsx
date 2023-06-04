@@ -2,7 +2,7 @@ import React from 'react'
 import SliderBoxContents from '@/components/blog/SliderBoxContents'
 import styled from 'styled-components'
 
-interface Props {}
+type Props = {}
 
 export default function SliderBox({}: Props) {
   return (
