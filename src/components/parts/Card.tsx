@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 const Card = ({children}: {children: React.ReactNode}) => (
   <CardStyle>{children}</CardStyle>
 )
@@ -15,4 +16,5 @@ const CardStyle = styled.div`
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.2);
+
 `
