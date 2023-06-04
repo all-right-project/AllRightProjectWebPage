@@ -28,8 +28,10 @@ const BannerStyle = styled.div`
     margin: 200px 0 0 17%;
     .banner {
       font-size: 145px;
-      font-weight: 600;
       margin-bottom: 50px;
+      font-family: var(--font-poppins);
+      font-weight: 600;
+      line-height: 180px;
     }
   }
   button {
