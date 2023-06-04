@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-interface Props {
+type Props {
   data: any
 }
 
@@ -9,8 +9,8 @@ export default function SearchIcon({data}: Props) {
   if (data) {
     return (
       <IconStyle>
-        <h3>{data.id}</h3>
-        <p>{data.title}</p>
+        {/*<h3>{data.id}</h3>*/}
+        {/*<p>{data.title}</p>*/}
       </IconStyle>
     )
   } else return <div>SearchIcon</div>

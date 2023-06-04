@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import SliderBox from '@/components/blog/SliderBox'
 import Categories from '@/components/blog/Categories'
 import Card from '@/components/parts/Card'
-import SearchIcon from '@/components/blog/SearchIcon'
 
 type Props = {}
 
@@ -19,10 +18,9 @@ const page = (props: Props) => {
           <SliderBox />
         </div>
         <Categories />
-        <div>
+        <Card>
           <h2>게시물</h2>
-          <Card children={<SearchIcon data=""></SearchIcon>} />
-        </div>
+        </Card>
       </div>
     </BlogContainer>
   )
@@ -32,7 +30,7 @@ export default page
 
 const BlogContainer = styled.div`
   width: 100%;
-  max-width: 1440px;
+  max-width: 1280px;
   margin: 0 auto;
   h1 {
     font-size: 2rem;

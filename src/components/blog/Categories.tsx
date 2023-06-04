@@ -4,7 +4,7 @@ import Image from 'next/image'
 import SearchBar from '@/assets/search-icon.png'
 import SearchIcon from '@/components/blog/SearchIcon'
 
-interface Props {}
+type Props {}
 
 export default function Categories({}: Props) {
   return (
@@ -33,7 +33,7 @@ export default function Categories({}: Props) {
 
 const CategoryContainer = styled.div`
   width: 100%;
-  max-width: 1440px;
+  max-width: 1280px;
   margin: 0 auto;
   .category {
     display: flex;

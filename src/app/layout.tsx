@@ -22,8 +22,10 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <html className={`${inter.variable} ${poppins.variable}`}>
       <body suppressHydrationWarning={true}>
         <GlobalStyle />
-        <Header />
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <Header />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
