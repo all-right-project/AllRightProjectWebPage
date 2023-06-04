@@ -4,7 +4,7 @@ import Image from 'next/image'
 import SearchBar from '@/assets/search-icon.png'
 import SearchIcon from '@/components/blog/SearchIcon'
 
-type Props {}
+type Props = {}
 
 export default function Categories({}: Props) {
   return (
