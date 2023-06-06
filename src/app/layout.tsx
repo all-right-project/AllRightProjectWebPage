@@ -20,9 +20,9 @@ const poppins = Poppins({
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html className={`${inter.variable} ${poppins.variable}`}>
-      <body suppressHydrationWarning={true}>
-        <GlobalStyle />
+      <body>
         <StyledComponentsRegistry>
+          <GlobalStyle />
           <Header />
           {children}
         </StyledComponentsRegistry>
