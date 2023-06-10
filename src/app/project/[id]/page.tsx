@@ -1,43 +1,91 @@
 'use client'
 import styled from 'styled-components'
-import {Carousel} from '@/components/project'
+import {
+  Carousel,
+  ProjectInfo,
+  SiteInfo,
+  StackInfo,
+  ParticipantsInfo,
+  LearnComment,
+} from '@/components/project'
+
 type Props = {
   params: {id: string}
 }
 
 const ProjectContent = ({params}: Props) => {
   return (
-    <ContentContainer>
+    <ContentContainerStyle>
       <div className="ly-banner">
-        <Banner>
+        <BannerStyle className="ly-Responsive">
           <h2>프로젝트 제목</h2>
-          <BannerContent>
+          <BannerContentStyle>
             <p>프로젝트 내용</p>
             <Carousel />
-          </BannerContent>
+          </BannerContentStyle>
           <span>2020-02-20에 완성하였어요!</span>
-        </Banner>
+        </BannerStyle>
       </div>
-      <div></div>
-    </ContentContainer>
+      <div className="ly-Responsive">
+        <ProjectInfo title="SITE">
+          <SiteInfo link="#"></SiteInfo>
+        </ProjectInfo>
+
+        <ProjectInfo title="STACK">
+          <StackInfo
+            plan={['Figma', 'Notion']}
+            design={['Figma']}
+            develope={['Nextjs', 'Styled-components']}
+          ></StackInfo>
+        </ProjectInfo>
+
+        <ProjectInfo title="PARTICIPANTS" displayType="flex">
+          <ParticipantsInfo></ParticipantsInfo>
+        </ProjectInfo>
+
+        <ProjectInfo title="WHAT DID YOU LEARN?">
+          <LearnComment></LearnComment>
+        </ProjectInfo>
+      </div>
+    </ContentContainerStyle>
   )
 }
 
 export default ProjectContent
 
-const ContentContainer = styled.div`
+const ContentContainerStyle = styled.div`
   .ly-banner {
     background-color: #f2f3f7;
     width: 100%;
     height: 600px;
   }
+  .ly-Responsive {
+    width: 1280px;
+    margin: auto;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      list-style: none;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  dl {
+    padding: 0;
+    margin: 0;
+    dd {
+      padding: 0;
+      margin: 0;
+    }
+  }
 `
 
-const Banner = styled.div`
+const BannerStyle = styled.div`
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width: 1280px;
   height: 100%;
   padding: 50px 0;
   box-sizing: border-box;
@@ -50,7 +98,7 @@ const Banner = styled.div`
     width: fit-content;
   }
 `
-const BannerContent = styled.div`
+const BannerContentStyle = styled.div`
   display: flex;
   flex-grow: 1;
   min-height: 0;
