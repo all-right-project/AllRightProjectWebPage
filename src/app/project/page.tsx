@@ -16,7 +16,7 @@ const page = (props: Props) => {
       <CardList>
         {arr.map(item => {
           return (
-            <Link href="#" key={item}>
+            <Link href={`/project/${item}`} key={item}>
               <Card>
                 <CardContents></CardContents>
               </Card>
