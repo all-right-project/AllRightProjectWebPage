@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import {HomeTitle} from '@/components/parts'
 import ProjectImg from '@/assets/project-img.png'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import * as solidIcon from '@fortawesome/free-solid-svg-icons'
 
 const Project = () => (
   <ProjectStyle>
@@ -22,7 +24,9 @@ const Project = () => (
         alt="profile icon"
       />
     </div>
-    <button>&gt;</button>
+    <button>
+      <FontAwesomeIcon icon={solidIcon.faArrowRight} />
+    </button>
   </ProjectStyle>
 )
 
