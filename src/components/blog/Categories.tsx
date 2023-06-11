@@ -7,15 +7,60 @@ import SearchIcon from '@/components/blog/SearchIcon'
 type Props = {}
 
 export default function Categories({}: Props) {
+  const [currentId, setCurrentId] = React.useState('all')
+  const handleCategories = (id: string) => {
+    setCurrentId(id)
+    console.log('handleCategories', `${id}`)
+  }
   return (
     <CategoryContainer>
       <div className="category">
         <ul>
-          <li className="active">모두보기</li>
-          <li>인기</li>
-          <li>프론트엔드</li>
-          <li>백엔드</li>
-          <li>기타</li>
+          <li
+            id="all"
+            style={{
+              background: `${currentId === 'all' ? '#ccc' : '#fff'}`,
+            }}
+            onClick={e => handleCategories(e.target.id)}
+          >
+            모두보기
+          </li>
+          <li
+            id="hot"
+            style={{
+              background: `${currentId === 'hot' ? '#ccc' : '#fff'}`,
+            }}
+            onClick={e => handleCategories(e.target.id)}
+          >
+            인기
+          </li>
+          <li
+            id="front"
+            style={{
+              background: `${currentId === 'front' ? '#ccc' : '#fff'}`,
+            }}
+            onClick={e => handleCategories(e.target.id)}
+          >
+            프론트엔드
+          </li>
+          <li
+            id="back"
+            style={{
+              background: `${currentId === 'back' ? '#ccc' : '#fff'}`,
+            }}
+            onClick={e => handleCategories(e.target.id)}
+          >
+            백엔드
+          </li>
+          <li
+            id="etc"
+            style={{
+              background: `${currentId === 'etc' ? '#ccc' : '#fff'}`,
+            }}
+            onClick={e => handleCategories(e.target.id)}
+          >
+            기타
+          </li>
         </ul>
         <SearchBox>
           <Image src={SearchBar} width={20} height={20} alt="검색바" />
@@ -24,7 +69,11 @@ export default function Categories({}: Props) {
       </div>
       <SearchResult>
         {SearchItem.map((item, index) => (
-          <SearchIcon key={item.id} data={SearchItem[index]} />
+          <SearchIcon
+            key={item.id}
+            data={SearchItem[index]}
+            currentId={currentId}
+          />
         ))}
       </SearchResult>
     </CategoryContainer>
@@ -80,19 +129,19 @@ const SearchResult = styled.div`
 const SearchItem = [
   {
     id: 1,
-    category: 'frontend',
+    category: 'front',
     image: 'react',
     title: 'React',
   },
   {
     id: 2,
-    category: 'frontend',
+    category: 'front',
     image: 'vue',
     title: 'Vue',
   },
   {
     id: 3,
-    category: 'frontend',
+    category: 'front',
     image: 'angular',
     title: 'Angular',
   },
