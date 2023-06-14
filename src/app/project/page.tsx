@@ -33,8 +33,7 @@ export default page
 const ProjectContainer = styled.div`
   max-width: 1280px;
   margin: 70px auto 0;
-  a {
-    color: #000;
-    text-decoration: none;
+  h1 {
+    margin: 30px 0;
   }
 `

@@ -18,6 +18,9 @@ export default ProjectInfo
 
 const ProjectInfoStyle = styled.div<{display?: string}>`
   margin-bottom: 50px;
+  h3 {
+    margin: 35px 0 20px;
+  }
   & > div {
     display: ${props => props.display || 'block'};
   }
