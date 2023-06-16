@@ -7,7 +7,12 @@ type Props = {}
 const Carousel = ({}: Props) => {
   return (
     <CarouselContainer>
-      <Image src={tempImg} className="img" alt="project introduce" />
+      <Image
+        src={tempImg}
+        className="img"
+        alt="project introduce"
+        priority={false}
+      />
       <MoveButton left="-30px">&lt;</MoveButton>
       <MoveButton right="-30px">&gt;</MoveButton>
     </CarouselContainer>

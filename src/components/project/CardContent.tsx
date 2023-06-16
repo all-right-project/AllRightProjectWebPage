@@ -9,7 +9,12 @@ const cardContents = () => {
   return (
     <CardContentsContainer>
       <div className="img-container">
-        <Image src={tempImg} className="img" alt="project thumbnail" />
+        <Image
+          src={tempImg}
+          className="img"
+          alt="project thumbnail"
+          priority={false}
+        />
       </div>
       <div className="content-container">
         <MainContents>

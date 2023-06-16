@@ -9,14 +9,17 @@ const Banner = () => (
         <div>All Right</div>
         <div>Frontend</div>
       </div>
+
       <button>Meet Our Team</button>
     </div>
+
     <div className="img-wrapper">
       <Image src={Icon.padaeng} className="img" alt="profile icon" />
       <Image src={Icon.basak} className="img" alt="profile icon" />
       <Image src={Icon.siyun} className="img" alt="profile icon" />
     </div>
-    <div className="background"></div>
+
+    <div className="background" />
   </BannerStyle>
 )
 
@@ -58,7 +61,7 @@ const BannerStyle = styled.div`
   .background {
     background-color: #4aa8d8;
     width: 100%;
-    height: 1390px;
+    height: 1320px;
     position: absolute;
     top: 520px;
     z-index: -2;
