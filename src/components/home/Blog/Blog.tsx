@@ -115,10 +115,11 @@ const BlogStyle = styled.div`
     border: none;
     font-size: 24px;
     font-weight: 600;
-    text-decoration: underline;
     font-style: italic;
     span {
-      margin-right: 10px;
+      margin-right: 6px;
+      padding: 0 4px 2px 0px;
+      border-bottom: 3px solid #000;
     }
   }
 `
