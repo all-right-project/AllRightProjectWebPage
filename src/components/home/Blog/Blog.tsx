@@ -110,14 +110,14 @@ const BlogStyle = styled.div`
   }
   button {
     position: relative;
-    left: 970px;
+    left: 940px;
     background-color: transparent;
     border: none;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
     font-style: italic;
     span {
-      margin-right: 6px;
+      margin-right: 10px;
       padding: 0 4px 2px 0px;
       border-bottom: 3px solid #000;
     }
