@@ -41,7 +41,6 @@ const CategoryContainer = styled.div`
     align-items: center;
     ul {
       display: flex;
-      list-style: none;
       li {
         margin: 0 10px;
         border: 1px solid #8e2828;

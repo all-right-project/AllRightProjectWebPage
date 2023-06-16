@@ -63,24 +63,6 @@ const ContentContainerStyle = styled.div`
     width: 1280px;
     margin: auto;
   }
-  ul {
-    padding: 0;
-    margin: 0;
-    li {
-      list-style: none;
-    }
-  }
-  a {
-    text-decoration: none;
-  }
-  dl {
-    padding: 0;
-    margin: 0;
-    dd {
-      padding: 0;
-      margin: 0;
-    }
-  }
 `
 
 const BannerStyle = styled.div`

@@ -8,38 +8,47 @@ type Props = {
 const StackInfo = ({plan, design, develope}: Props) => {
   return (
     <StackStyle>
-      <div className="title">기획</div>
-      <ul>
-        {plan.map(item => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-      <div className="title">디자인</div>
-      <ul>
-        {design.map(item => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-      <div className="title">개발</div>
-      <ul>
-        {develope.map(item => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+      <div className="stack-box">
+        <div className="title">기획</div>
+        <ul>
+          {plan.map(item => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="stack-box">
+        <div className="title">디자인</div>
+        <ul>
+          {design.map(item => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="stack-box">
+        <div className="title">개발</div>
+        <ul>
+          {develope.map(item => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
     </StackStyle>
   )
 }
 
 export default StackInfo
 const StackStyle = styled.div`
-  display: flex;
-  align-items: baseline;
+  .stack-box {
+    display: flex;
+    align-items: baseline;
+    margin: 15px 0;
+  }
   .title {
     width: 100px;
     margin-right: 20px;
     color: #888;
   }
-  & > ul {
+  ul {
     display: flex;
     & > li {
       padding: 8px 15px;

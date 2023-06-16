@@ -56,8 +56,6 @@ const MainContents = styled.div`
   h3 {
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0;
-    margin: 0;
     white-space: nowrap;
   }
   .introduce {

@@ -48,24 +48,13 @@ const HeaderContainer = styled.div`
 const LogoBox = styled.div`
   font-size: 2rem;
   font-weight: bold;
-  a {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
 `
 
 const NaviBox = styled.div`
   ul {
     display: flex;
-    list-style: none;
     li {
       margin-left: 20px;
-      a {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-      }
       a:hover {
         color: #ccc;
         transition: 0.3s;
