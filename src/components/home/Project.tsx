@@ -15,6 +15,7 @@ const Project = () => (
         height={450}
         className="img"
         alt="profile icon"
+        priority={false}
       />
       <Image
         src={ProjectImg}
@@ -22,6 +23,7 @@ const Project = () => (
         height={450}
         className="img"
         alt="profile icon"
+        priority={false}
       />
     </div>
     <button>

@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 type Props = {
   title: String
+  position?: Number
 }
 
-const HomeTitle = ({title}: Props) => {
+const CENTER = 42
+const HomeTitle = ({title, position = CENTER}: Props) => {
   const uppercaseTitle: String = title.toUpperCase()
+
   return (
-    <HomeTitleStyle>
+    <HomeTitleStyle position={position}>
       <div className="title">
         <div>our</div>
         <div>{uppercaseTitle}</div>
@@ -17,10 +20,11 @@ const HomeTitle = ({title}: Props) => {
 
 export default HomeTitle
 
-const HomeTitleStyle = styled.div`
+const HomeTitleStyle = styled.div<{position: Number}>`
   position: relative;
-  left: 42%;
+  left: ${({position}) => `${position}%`};
   font-family: var(--font-poppins);
+
   .title {
     line-height: 50px;
     div {
