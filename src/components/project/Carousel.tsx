@@ -16,15 +16,22 @@ const Carousel = ({}: Props) => {
 export default Carousel
 
 const CarouselContainer = styled.div`
-  width: 736px;
-  heigth: 443px;
+  width: 703px;
+  // height: 422px;
   background-color: #333;
   border-radius: 10px;
   position: relative;
   .img {
-    object-fit: cover;
+    object-fit: contain;
     height: 100%;
     width: 100%;
+  }
+  @media (max-width: 1358px) {
+    width: 600px;
+  }
+  @media (max-width: 700px) {
+    width: 100%;
+    border-radius: 0;
   }
 `
 const MoveButton = styled.button<{left?: string; right?: string}>`
@@ -39,4 +46,7 @@ const MoveButton = styled.button<{left?: string; right?: string}>`
   left: ${props => props.left || 'unset'};
   right: ${props => props.right || 'unset'};
   top: calc(50% - 40px);
+  @media (max-width: 700px) {
+    display: none;
+  }
 `

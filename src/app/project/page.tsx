@@ -33,7 +33,13 @@ export default page
 const ProjectContainer = styled.div`
   max-width: 1280px;
   margin: 70px auto 0;
+  padding: 0 10px;
   h1 {
     margin: 30px 0;
+  }
+  @media (max-width: 1310px) {
+    h1 {
+      text-align: center;
+    }
   }
 `

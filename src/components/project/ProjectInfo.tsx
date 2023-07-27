@@ -17,6 +17,7 @@ const ProjectInfo = ({title, displayType, children}: Props) => {
 export default ProjectInfo
 
 const ProjectInfoStyle = styled.div<{display?: string}>`
+  padding: 0 10px;
   margin-bottom: 50px;
   h3 {
     margin: 35px 0 20px;

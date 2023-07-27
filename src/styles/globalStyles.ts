@@ -4,6 +4,9 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-family: var(--font-inter);
   }
+  body{
+    margin:0
+  }
   a {
     color: #333;
     text-decoration: none;

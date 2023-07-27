@@ -32,6 +32,7 @@ const ParicipantsStyle = styled.div`
   border-radius: 10px;
   padding: 15px 10px;
   width: 255px;
+  margin-right: 5px;
   .profile {
     display: flex;
     align-items: center;
