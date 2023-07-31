@@ -2,7 +2,6 @@
 import styled from 'styled-components'
 import {
   Carousel,
-  ProjectInfo,
   SiteInfo,
   StackInfo,
   ParticipantsInfo,
@@ -16,11 +15,11 @@ type Props = {
 const ProjectContent = ({params}: Props) => {
   // 프로젝트 글자 수 제한 필요
   return (
-    <ContentContainerStyle>
+    <StyleContentContainer>
       <div className="ly-banner">
-        <BannerStyle className="ly-Responsive">
+        <StyleBanner className="ly-Responsive">
           <h2>프로젝트 제목</h2>
-          <BannerContentStyle>
+          <StyleBannerContent>
             <p>
               문서 디자인에 의미가 있는 글을 담으면 사람들은 양식을 보지 않고
               글의 내용에 집중하는 경향이 있다. 예를 들어 "나무위키의 서버는
@@ -42,40 +41,52 @@ const ProjectContent = ({params}: Props) => {
               예를 들어 "나무위키의 서버는 의미가 있는 글을 담으면 사
             </p>
             <Carousel />
-          </BannerContentStyle>
+          </StyleBannerContent>
           <span>2020-02-20에 완성하였어요!</span>
-        </BannerStyle>
+        </StyleBanner>
       </div>
       <div className="ly-Responsive">
-        <ProjectInfo title="SITE">
-          <SiteInfo link="#"></SiteInfo>
-        </ProjectInfo>
+        <StyleProjectInfo>
+          <h3>SITE</h3>
+          <div>
+            <SiteInfo link="#"></SiteInfo>
+          </div>
+        </StyleProjectInfo>
 
-        <ProjectInfo title="STACK">
-          <StackInfo
-            plan={['Figma', 'Notion']}
-            design={['Figma']}
-            develope={['Nextjs', 'Styled-components']}
-          ></StackInfo>
-        </ProjectInfo>
+        <StyleProjectInfo>
+          <h3>STACK</h3>
+          <div>
+            <StackInfo
+              plan={['Figma', 'Notion']}
+              design={['Figma']}
+              develope={['Nextjs', 'Styled-components']}
+            ></StackInfo>
+          </div>
+        </StyleProjectInfo>
 
-        <ProjectInfo title="PARTICIPANTS" displayType="flex">
-          <ParticipantsInfo></ParticipantsInfo>
-          <ParticipantsInfo></ParticipantsInfo>
-        </ProjectInfo>
+        <StyleProjectInfo>
+          <h3>PARTICIPANTS</h3>
+          <div className="d-flex">
+            <ParticipantsInfo></ParticipantsInfo>
+            <ParticipantsInfo></ParticipantsInfo>
+          </div>
+        </StyleProjectInfo>
 
-        <ProjectInfo title="WHAT DID YOU LEARN?">
-          <LearnComment></LearnComment>
-          <LearnComment></LearnComment>
-        </ProjectInfo>
+        <StyleProjectInfo>
+          <h3>WHAT DID YOU LEARN?</h3>
+          <div>
+            <LearnComment></LearnComment>
+            <LearnComment></LearnComment>
+          </div>
+        </StyleProjectInfo>
       </div>
-    </ContentContainerStyle>
+    </StyleContentContainer>
   )
 }
 
 export default ProjectContent
 
-const ContentContainerStyle = styled.div`
+const StyleContentContainer = styled.div`
   .ly-banner {
     background-color: #f2f3f7;
     width: 100%;
@@ -92,7 +103,7 @@ const ContentContainerStyle = styled.div`
   }
 `
 
-const BannerStyle = styled.div`
+const StyleBanner = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -119,7 +130,7 @@ const BannerStyle = styled.div`
     }
   }
 `
-const BannerContentStyle = styled.div`
+const StyleBannerContent = styled.div`
   display: flex;
   flex-grow: 1;
   min-height: 0;
@@ -139,5 +150,20 @@ const BannerContentStyle = styled.div`
       margin: 20px 0;
       padding: 0 10px;
     }
+  }
+`
+
+const StyleProjectInfo = styled.div`
+  padding: 0 10px;
+  margin-bottom: 50px;
+  h3 {
+    margin: 35px 0 20px;
+  }
+  & > div {
+    display: block;
+  }
+  .d-flex {
+    display: flex;
+    flex-wrap: wrap;
   }
 `

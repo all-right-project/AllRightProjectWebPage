@@ -44,17 +44,19 @@ const StackStyle = styled.div`
     margin: 15px 0;
   }
   .title {
-    width: 100px;
+    min-width: 70px;
     margin-right: 20px;
     color: #888;
   }
   ul {
     display: flex;
+    flex-wrap: wrap;
     & > li {
       padding: 8px 15px;
       border: 1px solid #333;
       border-radius: 50px;
-      margin-right: 10px;
+      margin-right: 5px;
+      margin-bottom: 5px;
       font-size: 14px;
     }
   }
