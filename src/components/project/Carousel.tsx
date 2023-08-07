@@ -17,7 +17,6 @@ export default Carousel
 
 const CarouselContainer = styled.div`
   width: 703px;
-  // height: 422px;
   background-color: #333;
   border-radius: 10px;
   position: relative;

@@ -13,7 +13,7 @@ type Props = {
 }
 
 const ProjectContent = ({params}: Props) => {
-  // 프로젝트 글자 수 제한 필요
+  // TODO: 프로젝트 글자 수 제한 필요
   return (
     <StyleContentContainer>
       <div className="ly-banner">
@@ -49,7 +49,7 @@ const ProjectContent = ({params}: Props) => {
         <StyleProjectInfo>
           <h3>SITE</h3>
           <div>
-            <SiteInfo link="#"></SiteInfo>
+            <SiteInfo link="#" />
           </div>
         </StyleProjectInfo>
 
@@ -67,16 +67,16 @@ const ProjectContent = ({params}: Props) => {
         <StyleProjectInfo>
           <h3>PARTICIPANTS</h3>
           <div className="d-flex">
-            <ParticipantsInfo></ParticipantsInfo>
-            <ParticipantsInfo></ParticipantsInfo>
+            <ParticipantsInfo />
+            <ParticipantsInfo />
           </div>
         </StyleProjectInfo>
 
         <StyleProjectInfo>
           <h3>WHAT DID YOU LEARN?</h3>
           <div>
-            <LearnComment></LearnComment>
-            <LearnComment></LearnComment>
+            <LearnComment />
+            <LearnComment />
           </div>
         </StyleProjectInfo>
       </div>
