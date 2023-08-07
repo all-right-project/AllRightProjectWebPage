@@ -2,7 +2,6 @@
 import styled from 'styled-components'
 import {
   Carousel,
-  ProjectInfo,
   SiteInfo,
   StackInfo,
   ParticipantsInfo,
@@ -14,63 +13,105 @@ type Props = {
 }
 
 const ProjectContent = ({params}: Props) => {
+  // TODO: 프로젝트 글자 수 제한 필요
   return (
-    <ContentContainerStyle>
+    <StyleContentContainer>
       <div className="ly-banner">
-        <BannerStyle className="ly-Responsive">
+        <StyleBanner className="ly-Responsive">
           <h2>프로젝트 제목</h2>
-          <BannerContentStyle>
-            <p>프로젝트 내용</p>
+          <StyleBannerContent>
+            <p>
+              문서 디자인에 의미가 있는 글을 담으면 사람들은 양식을 보지 않고
+              글의 내용에 집중하는 경향이 있다. 예를 들어 "나무위키의 서버는
+              파라과이에 있다."라는 문장을 적으면 대부분의 사람들은 글씨체에
+              집중하지 않고 글의 내용에 집 문서 디자인에 의미가 있는 글을 담으면
+              사람들은 양식을 보지 않고 글의 내용에 집중하는 경향이 있다.
+              <br />
+              <br /> 예를 들 문서 디자인에 의미가 있는 글을 담으면 사람들은
+              양식을 보지 않고 글의 내용에 집중하는 경 향이 있다.
+              <br />
+              <br /> 예를 들어 "나무위키의 서버는 파라과이에 있다."라는 문장을
+              적으면 대부분의 사 람들은 글씨체에 집중하지 않고 글의 내용에
+              집버는 파라과이에 있다."라는 문장을 적으면 대부분의 사람들은
+              글씨체에 집중하지 않고 <br />
+              <br />
+              글의 내용에 집 문서 디자인에 의미가 있는 글을 담으면 사람들은
+              양식을 보지 않고 글의 내용에 집중하는 경향이 있다. <br />
+              <br />
+              예를 들어 "나무위키의 서버는 의미가 있는 글을 담으면 사
+            </p>
             <Carousel />
-          </BannerContentStyle>
+          </StyleBannerContent>
           <span>2020-02-20에 완성하였어요!</span>
-        </BannerStyle>
+        </StyleBanner>
       </div>
       <div className="ly-Responsive">
-        <ProjectInfo title="SITE">
-          <SiteInfo link="#"></SiteInfo>
-        </ProjectInfo>
+        <StyleProjectInfo>
+          <h3>SITE</h3>
+          <div>
+            <SiteInfo link="#" />
+          </div>
+        </StyleProjectInfo>
 
-        <ProjectInfo title="STACK">
-          <StackInfo
-            plan={['Figma', 'Notion']}
-            design={['Figma']}
-            develope={['Nextjs', 'Styled-components']}
-          ></StackInfo>
-        </ProjectInfo>
+        <StyleProjectInfo>
+          <h3>STACK</h3>
+          <div>
+            <StackInfo
+              plan={['Figma', 'Notion']}
+              design={['Figma']}
+              develope={['Nextjs', 'Styled-components']}
+            ></StackInfo>
+          </div>
+        </StyleProjectInfo>
 
-        <ProjectInfo title="PARTICIPANTS" displayType="flex">
-          <ParticipantsInfo></ParticipantsInfo>
-        </ProjectInfo>
+        <StyleProjectInfo>
+          <h3>PARTICIPANTS</h3>
+          <div className="d-flex">
+            <ParticipantsInfo />
+            <ParticipantsInfo />
+          </div>
+        </StyleProjectInfo>
 
-        <ProjectInfo title="WHAT DID YOU LEARN?">
-          <LearnComment></LearnComment>
-        </ProjectInfo>
+        <StyleProjectInfo>
+          <h3>WHAT DID YOU LEARN?</h3>
+          <div>
+            <LearnComment />
+            <LearnComment />
+          </div>
+        </StyleProjectInfo>
       </div>
-    </ContentContainerStyle>
+    </StyleContentContainer>
   )
 }
 
 export default ProjectContent
 
-const ContentContainerStyle = styled.div`
+const StyleContentContainer = styled.div`
   .ly-banner {
     background-color: #f2f3f7;
     width: 100%;
     height: 600px;
   }
   .ly-Responsive {
-    width: 1280px;
+    max-width: 1280px;
     margin: auto;
+  }
+  @media (max-width: 1280px) {
+    .ly-banner {
+      height: auto;
+    }
   }
 `
 
-const BannerStyle = styled.div`
+const StyleBanner = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 50px 0;
+  padding: 47px 0;
   box-sizing: border-box;
+  h2 {
+    margin-bottom: 20px;
+  }
   span {
     font-size: 12px;
     color: #fff;
@@ -79,15 +120,50 @@ const BannerStyle = styled.div`
     border-radius: 5px;
     width: fit-content;
   }
+  @media (max-width: 1280px) {
+    h2 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    span {
+      margin: 0 10px;
+    }
+  }
 `
-const BannerContentStyle = styled.div`
+const StyleBannerContent = styled.div`
   display: flex;
   flex-grow: 1;
   min-height: 0;
   p {
+    margin: 0;
     flex-basis: 50%;
     overflow: hidden;
     padding-right: 40px;
     box-sizing: border-box;
+  }
+  @media (max-width: 1280px) {
+    flex-direction: column;
+    align-items: center;
+    p {
+      flex-basis: 40%;
+      order: 1;
+      margin: 20px 0;
+      padding: 0 10px;
+    }
+  }
+`
+
+const StyleProjectInfo = styled.div`
+  padding: 0 10px;
+  margin-bottom: 50px;
+  h3 {
+    margin: 35px 0 20px;
+  }
+  & > div {
+    display: block;
+  }
+  .d-flex {
+    display: flex;
+    flex-wrap: wrap;
   }
 `

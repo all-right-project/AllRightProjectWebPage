@@ -21,6 +21,7 @@ export default LearnComment
 
 const LearnStyle = styled.div`
   display: flex;
+  margin-bottom: 15px;
   .img {
     border-radius: 50%;
     width: 60px;

@@ -9,7 +9,11 @@ export default cardList
 
 const CardListLayout = styled.div`
   gap: 1rem;
-  display: grid;
-  overflow: visible;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  @media (max-width: 1310px) {
+    justify-content: center;
+    flex-grow: 0;
+  }
 `

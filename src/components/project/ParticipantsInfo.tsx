@@ -1,4 +1,5 @@
 'use client'
+
 import styled from 'styled-components'
 import Image from 'next/image'
 import * as Icon from '@/assets/icon'
@@ -32,6 +33,8 @@ const ParicipantsStyle = styled.div`
   border-radius: 10px;
   padding: 15px 10px;
   width: 255px;
+  margin-right: 5px;
+  margin-bottom: 10px;
   .profile {
     display: flex;
     align-items: center;

@@ -1,6 +1,5 @@
 export {default as CardContent} from './CardContent'
 export {default as Carousel} from './Carousel'
-export {default as ProjectInfo} from './ProjectInfo'
 export {default as SiteInfo} from './SiteInfo'
 export {default as StackInfo} from './StackInfo'
 export {default as ParticipantsInfo} from './ParticipantsInfo'
